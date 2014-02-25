@@ -1,0 +1,7 @@
+<h1>Administrators</h1>
+
+<% @administrators.each do |administrator| %>
+  <p><%= link_to(administrator.name, administrator) %> | <%= administrator.position %></p>
+<% end %>
+
+<%= params.inspect %>

@@ -1,0 +1,12 @@
+<h1><%= @administrator.name %></h1>
+
+<p><strong>Position: </strong><%= @administrator.position %></p>
+
+<p><strong>Students Assigned:</strong></p>
+
+<% @administrator.students.each do |student| %>
+  <p><%= student.name %> | Grade: <%= student.grade %> </p>
+<% end %>
+
+<hr />
+<p><%= link_to('Administrators', administrators_path) %></p>
