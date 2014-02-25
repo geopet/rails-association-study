@@ -1,0 +1,13 @@
+<h1><%= @student.name %></h1>
+
+<p><strong>Grade: </strong><%= @student.grade %></p>
+
+<p><strong>Administrators Assigned:</strong></p>
+
+<% @student.administrators.each do |administrator| %>
+  <p><%= administrator.name %> | Position: <%= administrator.position %> </p>
+<% end %>
+
+<hr />
+<p><%= link_to('Edit', edit_student_path) %> |
+<%= link_to('Students', students_path) %></p>

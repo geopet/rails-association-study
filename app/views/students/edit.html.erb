@@ -1,0 +1,13 @@
+<h1><%= @student.name %></h1>
+
+<%= simple_form_for @student do |f| %>
+  <%= f.input :name %>
+  <%= f.input :grade %>
+
+  <%= f.association :administrators, as: :check_boxes %>
+
+  <%= f.button :submit %>
+<% end %>
+
+<%= debug @student %>
+<%= params.inspect %>
