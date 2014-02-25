@@ -1,0 +1,13 @@
+<h1><%= @administrator.name %></h1>
+
+<%= simple_form_for @administrator do |f| %>
+  <%= f.input :name %>
+  <%= f.input :position %>
+
+  <%= f.association :assignments, collection: Student.all, as: :check_boxes %>
+
+  <%= f.button :submit %>
+<% end %>
+
+<%= debug @administrator %>
+<%= params.inspect %>
