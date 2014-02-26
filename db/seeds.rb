@@ -10,3 +10,6 @@ Assignment.create!(administrator_id: 1, student_id: 1)
 Assignment.create!(administrator_id: 1, student_id: 3)
 Assignment.create!(administrator_id: 2, student_id: 1)
 Assignment.create!(administrator_id: 3, student_id: 2)
+
+AdmissionForm.create!(student_id: 1, drinks_water: 1, has_pencils: 1, 
+                      details: 'Engaged student!')
