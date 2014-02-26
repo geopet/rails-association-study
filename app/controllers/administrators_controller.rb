@@ -20,6 +20,8 @@ class AdministratorsController < ApplicationController
   private
 
   def administrator_params
-    params.require(:administrator).permit(:name, :position, student_ids: [])
+    params.require(:administrator).permit(:name,
+                                          :position,
+                                          student_ids: [])
   end
 end

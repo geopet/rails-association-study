@@ -1,0 +1,12 @@
+<h1>Admission Form for <%= @student.name %></h1>
+
+<%= simple_form_for [@student, @admission_form] do |f| %>
+  <%= render partial: 'form', locals: { f: f } %>
+  <%= f.button :submit %>
+<% end %>
+
+<hr />
+<%= link_to('Students list', students_path) %>
+
+<%= debug @admission_form %>
+<%= params.inspect %>
