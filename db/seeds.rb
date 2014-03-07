@@ -13,3 +13,14 @@ Assignment.create!(administrator_id: 3, student_id: 2)
 
 AdmissionForm.create!(student_id: 1, drinks_water: 1, has_pencils: 1, 
                       details: 'Engaged student!')
+
+Supply.create!(name: 'pens')
+Supply.create!(name: 'paper')
+Supply.create!(name: 'scissors')
+Supply.create!(name: 'markers')
+
+SupplyList.create!(student_id: 1, supply_id: 2)
+SupplyList.create!(student_id: 1, supply_id: 3)
+SupplyList.create!(student_id: 2, supply_id: 1)
+SupplyList.create!(student_id: 3, supply_id: 4)
+SupplyList.create!(student_id: 3, supply_id: 1)
