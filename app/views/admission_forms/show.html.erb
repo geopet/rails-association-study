@@ -1,7 +1,12 @@
 <h1>Admission Form for <%= @student.name %></h1>
 
 <%= simple_form_for [@student, @admission_form] do |f| %>
-  <%= render partial: 'form', locals: { f: f } %>
+  <%= f.input :drinks_water, as: :radio_buttons %>
+  <%= f.input :has_pencils, as: :radio_buttons %>
+  <%= f.input :details %>
+  <%= simple_fields_for @student do |supply_checks| %>
+    <%= supply_checks.association :supplies, as: :check_boxes %>
+  <% end %>
   <%= f.button :submit %>
 <% end %>
 

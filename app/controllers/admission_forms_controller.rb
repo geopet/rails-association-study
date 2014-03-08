@@ -7,6 +7,7 @@ class AdmissionFormsController < ApplicationController
   def update
     admission_form = AdmissionForm.find(params[:id])
     admission_form.update(admission_form_params)
+    update_supplies
     redirect_to student_admission_form_path
   end
 
@@ -25,5 +26,10 @@ class AdmissionFormsController < ApplicationController
     params.require(:admission_form).permit(:details,
                                            :drinks_water,
                                            :has_pencils)
+  end
+
+  def update_supplies
+    student = Student.find(params[:student_id])
+    student.supply_ids = params[:student][:supply_ids]
   end
 end
